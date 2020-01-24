@@ -1,0 +1,298 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""TreeEditor.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "TreeEditor Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TreeEditor\0"
+            VALUE "LegalCopyright", "Copyright 2000\0"
+            VALUE "OriginalFilename", "TreeEditor.EXE\0"
+            VALUE "ProductName", "TreeEditor Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_TreeEditor          REGISTRY MOVEABLE PURE  "TreeEditor.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TREEEDITOR DIALOG DISCARDABLE  50, 50, 252, 249
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Internet menu editor"
+MENU IDR_DIALOG_MENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE_CTRL,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,5,5,232,144
+    EDITTEXT        IDC_EDIT_NAME,44,221,205,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_URL,45,199,196,13,ES_AUTOHSCROLL
+END
+
+IDD_CABOUT DIALOG DISCARDABLE  10, 10, 334, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About "
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",1,276,93,50,14
+    LTEXT           "Vladimir Novick  03.2000",IDC_STATIC,25,60,85,8
+    GROUPBOX        "Developer",IDC_STATIC,11,49,158,37
+    LTEXT           "v_novick@yahoo.com",IDC_STATIC,75,68,80,9
+    ICON            IDI_ICON_FOLDER,IDC_STATIC,298,57,21,20
+    LTEXT           "Dynamic Tree Editor V1.1",IDC_STATIC,196,62,97,13
+    GROUPBOX        "",IDC_STATIC,176,49,154,36
+    EDITTEXT        IDC_EDIT_CURRENT_NAME,20,22,302,13,ES_AUTOHSCROLL
+    GROUPBOX        "Current menu name",IDC_STATIC,10,6,321,39
+    CONTROL         212,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,14,91,26,
+                    15
+    PUSHBUTTON      "Internet site",IDC_BUTTON_INTERNET,37,90,72,17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TREEEDITOR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 249
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_OPEN           ICON    DISCARDABLE     "Images\\Openfold.ico"
+IDI_ICON_CLOSE          ICON    DISCARDABLE     "Images\\Remteacc.ico"
+IDI_ICON_LINK           ICON    DISCARDABLE     "Images\\Link.ico"
+IDI_ICON_PERSONAL_LINK  ICON    DISCARDABLE     "Images\\icon3.ico"
+IDI_ICON_FOLDER         ICON    DISCARDABLE     "Images\\Foldertr.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_NO_DROP_1    CURSOR  DISCARDABLE     "Images\\Nodrop01.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_POPUP_TREE MENU DISCARDABLE 
+BEGIN
+    POPUP "PopMenuTree"
+    BEGIN
+        MENUITEM "+ Expand",                    ID_POPMENUTREE_EXPANDALL
+        MENUITEM "-  Collapse",                 ID_POPMENUTREE_COLLAPSED
+        MENUITEM SEPARATOR
+        MENUITEM "New folder",                  ID_POPMENUTREE_INSERTFOLDER
+        MENUITEM "New item",                    ID_POPMENUTREE_INSERTITEM
+        MENUITEM SEPARATOR
+        MENUITEM "Insert top folder",           ID_POPMENUTREE_INSERTTOPFOLDER
+
+        MENUITEM "Insert top item",             ID_POPMENUTREE_INSERTTOPITEM
+        MENUITEM SEPARATOR
+        MENUITEM "Insert copy",                 ID_POPMENUTREE_INSERTCOPY
+        MENUITEM SEPARATOR
+        MENUITEM "Delete",                      ID_POPMENUTREE_DELETE
+    END
+END
+
+IDR_DIALOG_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "New",                         ID_FILE_NEW
+        MENUITEM "Open",                        ID_FILE_OPENFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Save",                        ID_FILE_SAVE
+        MENUITEM "Save As ..",                  ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Insert folder",               ID_POPMENUTREE_INSERTFOLDER
+        MENUITEM "Insert item",                 ID_POPMENUTREE_INSERTITEM
+        MENUITEM SEPARATOR
+        MENUITEM "Insert top folder",           ID_POPMENUTREE_INSERTTOPFOLDER
+
+        MENUITEM "Insert top item",             ID_POPMENUTREE_INSERTTOPITEM
+        MENUITEM SEPARATOR
+        MENUITEM "Insert copy",                 ID_POPMENUTREE_INSERTCOPY
+        MENUITEM "Insert from the file",        ID_EDIT_INSERTFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Save folder to file",         ID_EDIT_SAVEFOLDERTOFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Delete",                      ID_POPMENUTREE_DELETE
+        MENUITEM "Delete All",                  ID_INSERT_DELETEALL
+    END
+    POPUP "  Export"
+    BEGIN
+        MENUITEM "DHTML tree view page navigator", 
+                                                ID_EXPORT_HTMLTREEVIEWPAGE
+        MENUITEM "XML menu list",               ID_EXPORT_XMLMENULIST
+    END
+    POPUP "     Expand"
+    BEGIN
+        MENUITEM "+ Expand ALL",                ID_POPMENUTREE_EXPANDALL_N
+        MENUITEM "-  Collapse ALL",             ID_POPMENUTREE_COLLAPSED_N
+    END
+    POPUP "    Help"
+    BEGIN
+        MENUITEM "About",                       ID_HELP_ABOUT
+        MENUITEM "Online Support",              ID_HELP_HELP
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_SITE         BITMAP  DISCARDABLE     "images\\site.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "TreeEditor"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) (unknown sub-lang: 0x7) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENS)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, 0x7
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "images\\bitmap1.bmp"
+#endif    // English (U.S.) (unknown sub-lang: 0x7) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "TreeEditor.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

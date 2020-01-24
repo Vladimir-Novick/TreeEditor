@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{ADAD67A3-4752-11D4-9F4B-005004816FFF} = s 'TreeEditor'
+		'TreeEditor.EXE'
+		{
+			val AppID = s {ADAD67A3-4752-11D4-9F4B-005004816FFF}
+		}
+	}
+}
